@@ -1,0 +1,105 @@
+@import "variables";
+@import "timeline";
+@import "variables";
+@import "mixin";
+@import "extend";
+
+.container{
+    width: 100%;
+    margin: auto;
+    z-index: 999;
+}
+
+
+body{
+    margin: 0;
+    background-color: $primaryColor;
+    font-family:Merriweather, 'Helvetica Neue', Arial, sans-serif;
+    h3{
+        margin: 10%;
+    }
+    h2{
+        margin-left :7%;
+        margin-right :7%;
+    }
+    p{
+        margin-left :5%;
+        margin-right :5%;
+    }
+}
+
+
+
+header{
+    background: $primaryColor;
+    opacity: 0.8;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    .logo{
+        @extend %w50_fl;
+        h2{
+            padding: 10px 0;
+            color: $secondaryColor;
+            margin-left: 20px;
+        }
+    }
+    ul{
+        @extend %w50_fl;
+        display: flex;
+        list-style: none;
+        padding: 0;
+        li{
+            padding: 10px 20px;
+            a{
+                color: $secondaryColor;
+                text-decoration: none;
+                font-weight: bold;
+                text-transform: uppercase;
+                @include effet_trans(0.5s);
+                &:hover{
+                    color:rgb(145, 145, 209);
+                }
+            }
+        }
+    }
+}
+
+
+
+.carousel{
+    height: 500px;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    img{
+        height: 500px;
+        width: auto;
+    }
+}
+
+.footer{
+    text-align: center;
+    padding: 5rem 0;
+    background-color: grey;
+    height: 100px;
+    h2{
+        @extend %h2;
+        color: $secondaryColor;
+    }
+    span{
+        @extend %span;
+    }
+    input{
+        background: $secondaryColor;
+        color: $primaryColor;
+        padding: 10px 20px;
+        border-radius: 15px;
+        border: 0;
+    }
+    button{
+        @extend %button;
+    }
+}

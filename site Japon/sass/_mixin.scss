@@ -1,0 +1,3 @@
+@mixin effet_trans($delai){
+    transition: all $delai ease-in-out;
+}
